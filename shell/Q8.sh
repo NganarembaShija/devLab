@@ -1,10 +1,13 @@
-for((i=0;i<4;i++))
-do
-	for((j=0;j<=i;j++))
-	do
-		echo -n "*"
-	done
-	echo
+for((i=0; i<4; i++))
+do      for((j=0; j<=i; j++))
+        do    
+              if [[ $i -eq 3 && $j -eq 3 ]]; then
+              i=$(($i+1));
+              break
+        fi
+                echo -n "*"
+        done
+        echo
 done
 
 echo -e "\n"
