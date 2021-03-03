@@ -7,7 +7,7 @@ do
 	read arr[$i]
 	sum=$(($sum+${arr[$i]}))
 done
-average=$(echo $sum / $n | bc -l)
+average=$(($sum/$n))
 printf '%.2f' "$average"
 echo
 
